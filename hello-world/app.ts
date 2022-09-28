@@ -1,4 +1,5 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
+import { v4 as uuidv4 } from 'uuid';
 
 /**
  *
@@ -16,7 +17,7 @@ export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGat
         response = {
             statusCode: 200,
             body: JSON.stringify({
-                message: 'hello world',
+                message: uuidv4(),
             }),
         };
     } catch (err: unknown) {
