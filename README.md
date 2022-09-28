@@ -9,8 +9,9 @@ This project contains source code and supporting files for a serverless applicat
 
 # NOTE
 
-In order to this app run properly you need to install packages in /layers/nodejs/package.json
+In order to this app run properly you need to install packages in `/layers/nodejs/package.json`
 
+<hr/> 
 The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project. You can update the template to add AWS resources through the same deployment process that updates your application code.
 
 If you prefer to use an integrated development environment (IDE) to build and test your application, you can use the AWS Toolkit.  
