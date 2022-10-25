@@ -12,23 +12,23 @@ import { v4 as uuidv4 } from 'uuid';
  */
 
 export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-    let response: APIGatewayProxyResult;
-    try {
-        response = {
-            statusCode: 200,
-            body: JSON.stringify({
-                message: uuidv4(),
-            }),
-        };
-    } catch (err: unknown) {
-        console.log(err);
-        response = {
-            statusCode: 500,
-            body: JSON.stringify({
-                message: err instanceof Error ? err.message : 'some error happened',
-            }),
-        };
-    }
+  let response: APIGatewayProxyResult;
+  try {
+    response = {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'uuidv4()',
+      }),
+    };
+  } catch (err: unknown) {
+    console.log(err);
+    response = {
+      statusCode: 500,
+      body: JSON.stringify({
+        message: err instanceof Error ? err.message : 'some error happened',
+      }),
+    };
+  }
 
-    return response;
+  return response;
 };
